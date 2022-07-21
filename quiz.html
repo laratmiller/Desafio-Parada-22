@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Parada 22</title>
+</head>
+<body>
+    <script>
+        const jogador = prompt("De qual cidade você é?")
+        let op = 10 
+        let cont = 0
+        let pontuacao = 0
+        let resposta
+
+        while(op != 0){
+            op = parseInt(prompt("Sobre qual região você deseja responder o quiz? (Escolher Nordeste) \n 1 - Nordeste \n 2 - Centro-Oeste \n 3 - Sudeste \n 4 - Norte \n 5 - Sul \n 0 - Sair"))
+
+            switch(op){
+                case 1:
+                        resposta = prompt("É a região com mais estados! V ou F?")
+                        if(resposta == "V"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, mas não desista!!")
+                        }
+                        resposta = prompt("Recife é a capital estadual mais antiga do país! V ou F?")
+                        if(resposta == "V"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, mas não desista!!")
+                        }
+                        resposta = prompt("O litoral do Maranhão é praticamente intocado! V ou F?")
+                        if(resposta == "V"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, mas não desista!!")
+                        }
+                        alert(`${jogador}, sua pontuação final foi: ${pontuacao}`)
+                        pontuacao = 0
+                        break
+                case 0:
+                    alert("Você saiu!!")
+                    break
+                default:
+                    alert("digite uma opção valida")
+                    break
+            }
+            
+
+        }
+    </script>
+</body>
+</html>
